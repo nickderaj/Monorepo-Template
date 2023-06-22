@@ -1,9 +1,9 @@
-import { Metadata } from "next";
-import Head from "next/head";
-import { Button } from "ui";
+import { Metadata } from 'next';
+import Head from 'next/head';
+import { Button } from 'ui';
 
 export const metadata: Metadata = {
-  title: "Docs - Turborepo Example",
+  title: 'Docs - Turborepo Example',
 };
 
 export default function Home() {

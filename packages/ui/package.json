@@ -13,20 +13,32 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "jest --env=jsdom",
+    "test:watch": "jest --watch --env=jsdom"
+  },
+  "jest": {
+    "preset": "jest-presets/jest/node"
   },
   "peerDependencies": {
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.2",
     "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.4",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "jest": "^29.5.0",
+    "jest-presets": "workspace:*",
     "postcss": "^8.4.20",
     "react": "^18.2.0",
     "tailwind-config": "workspace:*",
     "tsconfig": "workspace:*",
     "tsup": "^6.1.3",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0"
   }
 }
