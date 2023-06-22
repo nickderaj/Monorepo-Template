@@ -1,14 +1,16 @@
-import * as ReactDOM from 'react-dom';
+import '@testing-library/jest-dom';
+import { cleanup, render, screen } from '@testing-library/react';
 import Spinner from '../components/Spinner';
 
 describe('Spinner', () => {
   let div: HTMLDivElement;
   beforeEach(() => (div = document.createElement('div')));
-  afterAll(() => ReactDOM.unmountComponentAtNode(div));
+  afterEach(cleanup);
+  afterAll(() => div.remove());
 
   it('renders', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Spinner />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    render(<Spinner />);
+    const spinner = screen.getByTestId('spinner');
+    expect(spinner).toBeInTheDocument();
   });
 });

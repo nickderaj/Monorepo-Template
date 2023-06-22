@@ -1,23 +1,26 @@
-import * as ReactDOM from 'react-dom';
+import '@testing-library/jest-dom';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import Button from '../components/Button';
 
 describe('Button', () => {
   let div: HTMLDivElement;
   beforeEach(() => (div = document.createElement('div')));
-  afterAll(() => ReactDOM.unmountComponentAtNode(div));
+  afterEach(cleanup);
+  afterAll(() => div.remove());
 
   it('renders', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Button />, div);
+    render(<Button data-testid="btn" />);
+    const button = screen.getByTestId('btn');
+
+    expect(button).toBeInTheDocument();
   });
 
   it('fires an event on onClick', () => {
     const fn = jest.fn();
-    const div = document.createElement('div');
-    ReactDOM.render(<Button onClick={fn} />, div);
+    render(<Button onClick={fn} data-testid="btn" />);
 
-    const button = div.querySelector('button');
-    button?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    const button = screen.getByTestId('btn');
+    fireEvent.click(button);
     expect(fn).toHaveBeenCalled();
   });
 });
