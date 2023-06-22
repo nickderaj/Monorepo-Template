@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Head from 'next/head';
 import { Button } from 'ui';
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function Home() {
           </span>
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
-          <Button />
+          <Button>Hello</Button>
         </div>
       </main>
     </div>
