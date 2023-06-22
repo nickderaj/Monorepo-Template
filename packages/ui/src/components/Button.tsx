@@ -9,10 +9,10 @@ const Button: React.FC<IButton> = ({ variant = 'primary', ...props }) => {
 
     switch (variant) {
       case 'primary':
-        return `bg-indigo-500 text-white hover:brightness-125 border-indigo-500 
+        return `bg-primary text-white hover:brightness-125 border-primary 
           disabled:bg-neutral-500 disabled:border-neutral-500 ${commonClasses} ${props.className}`;
       case 'secondary':
-        return `border-indigo-500 text-indigo-500 disabled:border-neutral-500
+        return `border-primary text-primary disabled:border-neutral-500
           disabled:text-neutral-500 ${commonClasses} ${props.className}`;
     }
   };
