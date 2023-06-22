@@ -1,14 +1,27 @@
-export const Button = () => {
+export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary';
+}
+
+// Reusable styled button with a primary and secondary variant, could add others like 'error' and 'warning' if needed
+const Button: React.FC<IButton> = ({ variant = 'primary', ...props }) => {
+  const buttonClasses = () => {
+    const commonClasses = 'border hover:shadow-md px-4 py-1 text-center rounded-xl duration-300 transition-all';
+
+    switch (variant) {
+      case 'primary':
+        return `bg-indigo-500 text-white hover:brightness-125 border-indigo-500 
+          disabled:bg-neutral-500 disabled:border-neutral-500 ${commonClasses} ${props.className}`;
+      case 'secondary':
+        return `border-indigo-500 text-indigo-500 disabled:border-neutral-500
+          disabled:text-neutral-500 ${commonClasses} ${props.className}`;
+    }
+  };
+
   return (
-    <div className="rounded-md ">
-      <a href="https://turbo.build/repo/docs">
-        <div className="ui-flex ui-w-full ui-items-center ui-justify-center ui-rounded-md ui-border ui-border-transparent ui-px-8 ui-py-3 ui-text-base ui-font-medium ui-no-underline ui-bg-white ui-text-black hover:ui-bg-gray-300 md:ui-py-3 md:ui-px-10 md:ui-text-lg md:ui-leading-6">
-          Read the docs
-          <span className="ui-ml-2 ui-bg-gradient-to-r ui-from-brandred ui-to-brandblue ui-bg-clip-text ui-text-transparent">
-            →
-          </span>
-        </div>
-      </a>
-    </div>
+    <button {...props} className={buttonClasses()}>
+      {props.children}
+    </button>
   );
 };
+
+export default Button;

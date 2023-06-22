@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import { Button } from '../Button';
+import Button from '../Button';
 
 describe('Button', () => {
   it('renders without crashing', () => {
