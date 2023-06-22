@@ -6,31 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next .turbo node_modules"
   },
   "dependencies": {
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ui": "workspace:*"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "src/*",
-        "src/*/index"
-      ]
-    }
-  },
-  "publishConfig": {
-    "typesVersions": {
-      "*": {
-        "*": [
-          "dist/*.d.ts",
-          "dist/*/index.d.ts"
-        ]
-      }
-    }
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
