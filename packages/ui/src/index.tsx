@@ -1,8 +1,12 @@
+'use client';
+
 // styles
-import Button from './components/Button';
-import Spinner from './components/Spinner';
 import './styles.css';
 
 // components
+import Button from './components/Button';
+import Modal from './components/Modal';
+import ModalPortal from './components/ModalPortal';
+import Spinner from './components/Spinner';
 
-export { Button, Spinner };
+export { Button, Modal, ModalPortal, Spinner };

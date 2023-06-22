@@ -8,6 +8,24 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ]
+    }
+  },
+  "publishConfig": {
+    "typesVersions": {
+      "*": {
+        "*": [
+          "dist/*.d.ts",
+          "dist/*/index.d.ts"
+        ]
+      }
+    }
+  },
   "dependencies": {
     "next": "^13.4.1",
     "react": "^18.2.0",
