@@ -1,0 +1,27 @@
+{
+  "name": "tools",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "tsc -w",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-presets/jest/node"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/node": "^18.11.17",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "jest": "^29.5.0",
+    "jest-presets": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.9.4"
+  }
+}

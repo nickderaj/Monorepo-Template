@@ -18,9 +18,8 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "license": "MIT",
   "jest": {
-    "preset": "jest-presets/jest/node"
+    "preset": "jest-presets/jest/react"
   },
   "peerDependencies": {
     "react": "^18.2.0"
