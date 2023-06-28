@@ -6,6 +6,7 @@
     "clean": "turbo clean",
     "build": "turbo build",
     "test": "turbo run test",
+    "gen": "turbo gen workspace",
     "test:watch": "turbo run test:watch",
     "deploy": "turbo deploy",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
