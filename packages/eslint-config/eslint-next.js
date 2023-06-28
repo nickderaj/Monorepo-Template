@@ -27,7 +27,6 @@ module.exports = {
     'max-len': 0,
     quotes: 0,
     'comma-dangle': 0,
-    'object-curly-newline': 0,
     'no-unused-vars': [1, { args: 'after-used', argsIgnorePattern: '_' }],
     '@typescript-eslint/no-unused-vars': 0,
     'no-param-reassign': 0,

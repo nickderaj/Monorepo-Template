@@ -5,7 +5,8 @@ export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 // Reusable styled button with a primary and secondary variant, could add others like 'error' and 'warning' if needed
 const Button: React.FC<IButton> = ({ variant = 'primary', ...props }) => {
   const buttonClasses = () => {
-    const commonClasses = 'border hover:shadow-md px-4 py-1 text-center rounded-xl duration-300 transition-all';
+    const commonClasses =
+      'border hover:shadow-md px-4 py-1 text-center rounded-xl duration-300 transition-all';
 
     switch (variant) {
       case 'primary':

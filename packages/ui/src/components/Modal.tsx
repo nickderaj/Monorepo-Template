@@ -11,7 +11,13 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Modal: React.FC<Props> = ({ title, onClose, isLoading = false, isOpen = false, children }) => {
+const Modal: React.FC<Props> = ({
+  title,
+  onClose,
+  isLoading = false,
+  isOpen = false,
+  children,
+}) => {
   return (
     <ModalPortal onClose={onClose} isOpen={isOpen}>
       <div className="bg-slate-800 z-50 rounded-md flex flex-col min-w-[330px] w-min h-min relative text-white">
