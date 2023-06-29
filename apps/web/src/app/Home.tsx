@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import { Button, Modal } from 'ui';
-import PrimaryLayout from '../components/Layout/PrimaryLayout';
-import { PageWithLayout } from './page';
+'use client';
 
-const Home: PageWithLayout = () => {
+import SampleModal from '@/components/Modal/SampleModal';
+import { useState } from 'react';
+import { Button } from 'ui';
+
+const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleModal = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevState) => !prevState);
   };
 
   return (
@@ -23,14 +24,9 @@ const Home: PageWithLayout = () => {
           <Button onClick={toggleModal}>Click me</Button>
         </div>
       </main>
-      <Modal title="Sample Modal" onClose={toggleModal} isOpen={isOpen}>
-        <div className="w-full flex justify-center items-center mb-4">
-          <Button onClick={toggleModal}>Close</Button>
-        </div>
-      </Modal>
+      <SampleModal isOpen={isOpen} toggleModal={toggleModal} />
     </>
   );
 };
 
-Home.getLayout = (page: React.ReactNode) => <PrimaryLayout title="Home Page">{page}</PrimaryLayout>;
 export default Home;
