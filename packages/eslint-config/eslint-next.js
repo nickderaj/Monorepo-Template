@@ -23,6 +23,7 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
+  ignorePatterns: ['dist', 'node_modules'],
   rules: {
     'max-len': 0,
     quotes: 0,
@@ -30,7 +31,7 @@ module.exports = {
     'no-unused-vars': [1, { args: 'after-used', argsIgnorePattern: '_' }],
     '@typescript-eslint/no-unused-vars': 0,
     'no-param-reassign': 0,
-    'no-console': 'warn',
+    'no-console': 1,
     'linebreak-style': 0,
     'import/no-anonymous-default-export': 0,
     'import/extensions': 0,

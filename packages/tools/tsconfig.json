@@ -1,11 +1,12 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["ES2015"],
     "module": "CommonJS",
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "types": ["node", "jest"]
   },
-  "extends": "tsconfig/base.json",
   "include": ["**/*.ts", "**/*.tsx", ".eslintrc.js"],
   "exclude": ["dist", ".turbo", "node_modules"]
 }

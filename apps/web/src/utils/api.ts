@@ -8,7 +8,7 @@ export const fetcher = async (url: string) => {
 };
 
 export const handleError = (
-  error: any,
+  error: unknown,
 ): {
   statusCode: StatusEnum;
   data: { message: string };

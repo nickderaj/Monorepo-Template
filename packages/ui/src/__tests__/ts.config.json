@@ -1,5 +1,0 @@
-{
-  "extends": "../../tsconfig.json",
-  "include": [".", "../."],
-  "types": ["node", "jest", "@testing-library/jest-dom"]
-}

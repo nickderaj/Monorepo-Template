@@ -6,11 +6,12 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
+  ignorePatterns: ['dist', 'node_modules'],
   env: {
     es6: true,
     node: true,
   },
   rules: {
-    'no-console': 1, // warning
+    'no-console': 1,
   },
 };
