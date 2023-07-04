@@ -1,0 +1,13 @@
+{
+  "name": "@config/typescript",
+  "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/levaintech/sticky"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "typescript": "*"
+  }
+}

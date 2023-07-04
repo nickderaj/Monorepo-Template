@@ -1,5 +1,5 @@
 {
-  "name": "jest-presets",
+  "name": "@config/jest",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",

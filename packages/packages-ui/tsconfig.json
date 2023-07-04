@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@config/typescript/tsconfig.json",
   "include": ["**/*.ts", "**/*.tsx", ".eslintrc.js"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {

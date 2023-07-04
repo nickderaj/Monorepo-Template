@@ -18,7 +18,7 @@ This Turborepo includes the following packages/apps:
 
 - `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
 - `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@config/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
@@ -29,7 +29,7 @@ This example is setup to build `packages/ui` and output the transpiled source an
 
 Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.js` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
 
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
+For example, in [tailwind.config.js](packages/@config/tailwind/tailwind.config.js):
 
 ```js
   content: [
@@ -42,7 +42,7 @@ For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This Turborepo has some additional @packages/tools already setup for you:
 
 - [Tailwind CSS](https://tailwindcss.com/) for styles
 - [TypeScript](https://www.typescriptlang.org/) for static type checking

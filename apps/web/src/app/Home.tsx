@@ -2,7 +2,7 @@
 
 import SampleModal from '@/components/Modal/SampleModal';
 import { useState } from 'react';
-import { Button } from 'ui';
+import { Button } from '../../../../packages/packages-ui/dist';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

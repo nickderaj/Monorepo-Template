@@ -1,5 +1,5 @@
 import { StatusEnum } from '@/types/ApiTypes';
-import { Logger } from 'tools';
+import { Logger } from '../../../../packages/packages-tools/src';
 
 export const fetcher = async (url: string) => {
   const res = await fetch(url);

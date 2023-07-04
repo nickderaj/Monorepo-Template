@@ -1,8 +1,13 @@
 'use client';
 
-import { Button, Modal } from 'ui';
+import { Button, Modal } from '@packages/ui';
 
-const SampleModal = ({ toggleModal, isOpen }) => {
+type Props = {
+  toggleModal: () => void;
+  isOpen: boolean;
+};
+
+const SampleModal: React.FC<Props> = ({ toggleModal, isOpen }) => {
   return (
     <Modal title="Sample Modal" onClose={toggleModal} isOpen={isOpen}>
       <div className="w-full flex justify-center items-center mb-4">
